@@ -1,0 +1,17 @@
+<% provide(:title, Slot) %>
+
+  <aside>
+    <section class="user_info">
+      <h1>Room
+      <%= @room.id %>
+       </h1>
+      <h1>Slot
+        <%= @slot.id %>
+      </h1>
+    </section>
+
+      <div class="flexbox">
+    <%= render User.where(slot_id: @slot.id) %>
+    </div>
+
+  </aside>

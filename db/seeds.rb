@@ -1,0 +1,10 @@
+User.create!(name:  "admin",
+             email: "test@sarthakjha.com",
+             password:              "qweqwe",
+             password_confirmation: "qweqwe",
+             admin: true)
+             User.create!(name:  "non-admin",
+                          email: "sarthak@commutatus.com",
+                          password:              "qweqwe",
+                          password_confirmation: "qweqwe",
+                          admin: false)

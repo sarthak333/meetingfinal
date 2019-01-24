@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2019-01-19 11:31:07
+  stop: 2019-01-19 11:31:07
+  people: 1
+
+two:
+  start: 2019-01-19 11:31:07
+  stop: 2019-01-19 11:31:07
+  people: 1

@@ -1,0 +1,21 @@
+
+<% provide(:title, 'New Slot') %>
+<h1>Create a new slot</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@slot, url: slotadd_path) do |f| %>
+      <%= render 'shared/error_messages_slot' %>
+
+      <%= f.label :start %>
+      <%= f.time_field :start, class: 'form-control' %>
+
+      <%= f.label :stop %>
+      <%= f.time_field :stop, class: 'form-control' %>
+      <%= f.label :people %>
+      <%= f.number_field :people, class: 'form-control' %>
+
+      <%= f.submit "Create Slot", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

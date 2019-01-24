@@ -1,0 +1,34 @@
+<%slot=Slot.find(urecord.slot_id)%>
+
+<div class="col-sm-2 center card">
+<br>
+<p>
+  <strong>Slot ID:</strong>
+  <%= slot.id %>
+  </p>
+    <p>
+  <strong> Slot Start: </strong>
+  <%= slot.start.to_formatted_s(:time) %>
+  </p>
+
+  <p>
+    <strong> Slot Stop: </strong>
+    <%= slot.stop.to_formatted_s(:time) %>
+    </p>
+
+    <p>
+      <strong> People: </strong>
+   <%= slot.people %>
+      </p>
+      <p>
+        <strong> Current Status: </strong>
+     <%= urecord.status %>
+        </p>
+      <p>
+  <%= link_to "Accept", response_path(:slot_id => slot.id, :user_id => @user.id),  class:"btn btn-sm btn-success"%>
+  <div></div>
+  <%= link_to "Decline", responseno_path(:slot_id => slot.id, :user_id => @user.id),  class:"btn btn-sm btn-danger"%>
+<div></div>
+<br>
+
+</div>

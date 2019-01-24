@@ -1,0 +1,30 @@
+
+<div class="col-sm-5 center card ">
+<br>
+<p>
+  <strong>Slot ID:</strong>
+  <%= slot.id %>
+  </p>
+    <p>
+  <strong> Slot Start: </strong>
+  <%= slot.start.to_formatted_s(:time) %>
+  </p>
+
+  <p>
+    <strong> Slot Stop: </strong>
+    <%= slot.stop.to_formatted_s(:time) %>
+    </p>
+
+    <p>
+      <strong> People: </strong>
+   <%= slot.people %>
+      </p>
+<br>
+<div class="center">
+<%= link_to "Add Users", adduser_path(:room_id => @room.id, :slot_id => slot.id) , class:"btn btn-info btn-sm"%>
+<div style="height:1vh"></div>
+<%= link_to "Display users", showSlotUsers_path(:room_id => @room.id, :slot_id => slot.id) , class:"btn btn-warning btn-sm"%>
+</div>
+<br>
+<br>
+</div>

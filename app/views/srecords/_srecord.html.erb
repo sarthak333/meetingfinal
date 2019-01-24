@@ -1,0 +1,12 @@
+
+<div class="center col-md-3 card" style="margin-bottom: 15px">
+  <% userID=srecord.user_id%>
+  <% user= User.find(userID) %>
+  <br>
+  <%= gravatar_for user %>
+<h3><%= user.name %></h3>
+<h2><%= user.email %></h2>
+<h4>Confirmed</h4>
+<h2><%= srecord.status %></h2>
+<br>
+</div>

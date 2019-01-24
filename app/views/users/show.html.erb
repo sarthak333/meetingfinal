@@ -1,0 +1,35 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4 col-md-offset-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>  </h1>
+
+        <h4 class="center"><%= @user.email %>
+    </h4>
+      <br>
+    </section>
+       </aside>
+       <div class="row">
+         <div class="col-sm-12 center">
+    <section class="center">
+      <%= link_to "Create New Room" , newroom_path , class: "btn btn-lg btn-info" %>
+
+    </section>
+    </div>
+    </div>
+
+      <h3 class="center"style="margin-top:5%;">Available Rooms</h3>
+    <div class="flexbox">
+    <%= render  Room.all %>
+</div>
+<br>
+<br>
+<h3 class="center" style="margin-top:5%;">Current Meetings</h3>
+<div class="flexbox">
+    <%= render Urecord.where(user_id: @user.id) %>
+</div>
+        <br>
+
+</div>

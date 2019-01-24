@@ -1,0 +1,23 @@
+<% provide(:title, @room.name) %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <section class="user_info">
+      <h1> <%= @room.name %> </h1>
+    </section>
+    <h2>Capacity:<%= @room.capacity%></h2>
+    <section>
+      <h3 class="center"> Current Slots </h3>
+      <br>
+      <br>
+      <div class="flexbox">
+      <%= render @room.slot %>
+      </div>
+      </section>
+      <br>
+      <br>
+      <br>
+      <h3 class="center">Add a Slot</h3>
+
+      <%= render 'slots/form' %>
+</div>
+</div>

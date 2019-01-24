@@ -1,0 +1,3 @@
+class Srecord < ApplicationRecord
+  
+end
