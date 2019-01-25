@@ -7,11 +7,35 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+.sidebar{
+  position: fixed;
+  height: 100%;
+  margin-top:-1%;
+  width: 18%;
+  background-color: #d7d6d6;
+}
 body {
-  padding: 5%;
+  background-color: #fafafa;
+  overflow-x: hidden;
+  padding-left:0 !important;
   padding-top: 60px;
   width: 100% !important;
 }
+.display{
+    background-color: #fafafa;
+    float: right !important;
+    width:82% !important;
+    }
+    .bodcon
+    {
+      width: 100%;
+      min-height: 100%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      padding: 3%;
+    }
 .btn{
   font-weight: bolder;
   text-shadow: 0px 0px 1px #000;
@@ -37,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 .card{
-  background-color:#f5f5f5;
+  background-color:#fff;
   box-shadow: 1px 1px 5px #000;
   margin: 2%;
 }
@@ -65,8 +89,9 @@ p {
 .flexbox{
   display: flex;
   justify-content: center;
-  
+
 }
+
 /* header */
 
 #logo {

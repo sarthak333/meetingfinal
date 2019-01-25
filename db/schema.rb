@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_24_075249) do
+ActiveRecord::Schema.define(version: 2019_01_25_060024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,19 +35,19 @@ ActiveRecord::Schema.define(version: 2019_01_24_075249) do
   end
 
   create_table "srecords", force: :cascade do |t|
-    t.integer "slot_id"
     t.integer "user_id"
+    t.string "status", default: "Uncomfirmed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status", default: "Unconfirm"
+    t.integer "slot_id"
   end
 
   create_table "urecords", force: :cascade do |t|
-    t.integer "user_id"
     t.integer "slot_id"
+    t.string "status", default: "Not Yet Responded"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status", default: "Not Responded"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

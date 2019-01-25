@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-has_many :meeting
+has_many :urecord
   before_save { self.email = email.downcase }
   before_save :generate_token
   validates :name,  presence: true, length: { maximum: 50 }

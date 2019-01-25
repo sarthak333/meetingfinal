@@ -1,0 +1,21 @@
+<% @user= current_user %>
+<div class="sidebar center" style="padding-top:3%">
+  <h1>
+    <%= gravatar_for @user %>
+    <br>
+    <br>
+    <%= @user.name %>  </h1>
+
+    <h4 class="center"><%= @user.email %>
+</h4>
+<br>
+<br>
+  <%= if @user.admin?
+   link_to "Create New Room" , newroom_path , class: "btn btn-lg btn-info"
+   end%>
+   <h3>Total Meetings:
+
+  <%= @user.urecord.count %>
+  </h3>
+
+  </div>
