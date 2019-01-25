@@ -12,17 +12,24 @@ $gray-medium-light: #eaeaea;
   height: 100%;
   margin-top:-1%;
   width: 18%;
-  background-color: #d7d6d6;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px #dedede;
+}
+.navbar{
+  background-color: #1aa3ff !important;
+  a{
+    color: #fff !important;
+  }
 }
 body {
-  background-color: #fafafa;
+  background-color: #f7f7f8;
   overflow-x: hidden;
   padding-left:0 !important;
   padding-top: 60px;
   width: 100% !important;
 }
 .display{
-    background-color: #fafafa;
+    background-color: #f7f7f8;
     float: right !important;
     width:82% !important;
     }
@@ -62,8 +69,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .card{
   background-color:#fff;
-  box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px #dedede;
   margin: 2%;
+  border-radius: 10px;
 }
 h1 {
   font-size: 3em;
@@ -91,7 +99,9 @@ p {
   justify-content: center;
 
 }
-
+.fbox{
+    overflow-x: hidden !important;
+}
 /* header */
 
 #logo {

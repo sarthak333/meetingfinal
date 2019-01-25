@@ -7,11 +7,11 @@ class Slot < ApplicationRecord
   validates :people, presence: true, if: :valid_people
 
   def valid_start
-  (start.to_time.hour>=9 && stop.to_time- start.to_time >= 1800) ? true : errors.add(:start)
-  
+  (!start.nil? && start.to_time.hour>=9 && stop.to_time- start.to_time >= 1800) ? true : errors.add(:start)
+
   end
   def valid_stop
-    stop.to_time.hour<=20 ? true : errors.add(:stop)
+    (!stop.nil? && stop.to_time.hour<=20) ? true : errors.add(:stop)
 
   end
   def valid_people
