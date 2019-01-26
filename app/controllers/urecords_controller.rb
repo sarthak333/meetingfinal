@@ -6,8 +6,8 @@ end
   end
 
 def yes
-urec=Urecord.where(:slot_id => params[:slot_id]).first
-srec=Srecord.where(:user_id => params[:user_id]).first
+urec=Urecord.find_by(slot_id: params[:slot_id])
+srec=Srecord.find_by(user_id: params[:user_id])
 srec.update_column(:status, "Confirmed")
 urec.update_column(:status, "Accepted")
     redirect_back(fallback_location: root_path)
