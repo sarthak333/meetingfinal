@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    #@user = User.new
   end
   def addSlot
     user= User.find(params[:user_id])
