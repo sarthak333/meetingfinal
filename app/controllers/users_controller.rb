@@ -15,9 +15,8 @@ user.update_column(:room_id, params[:room_id].to_i)
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      flash[:success] = "User Saved"
+      redirect_to root_path
     else
       render 'new'
     end
