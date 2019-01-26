@@ -8,7 +8,12 @@ class Slot < ApplicationRecord
 
   def valid_start
   (!start.nil? && start.to_time.hour>=9 && stop.to_time- start.to_time >= 1800) ? true : errors.add(:start)
-
+  @queryslot= Slot.all
+  @queryslot.each do |q|
+  if start.between?(q.start, q.stop-1)
+    errors.add(:start)
+  end
+    end
   end
   def valid_stop
     (!stop.nil? && stop.to_time.hour<=20) ? true : errors.add(:stop)
