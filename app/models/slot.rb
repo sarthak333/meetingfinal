@@ -33,6 +33,7 @@ class Slot < ApplicationRecord
 
   end
   def valid_stop
+      if start.present? && stop.present?
   if stop.to_time.hour>20
     errors.add(:stop, "Not within Office Timings")
 end
@@ -47,4 +48,5 @@ end
      break token unless self.class.exists?(token: token)
    end
  end
+end
 end
