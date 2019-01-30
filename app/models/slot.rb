@@ -6,6 +6,7 @@ class Slot < ApplicationRecord
   validates :start, presence: true
   validate :valid_start
   validates :stop, presence: true
+  validate :valid_stop
   validates :description, presence: true
 
   def valid_start
@@ -33,10 +34,12 @@ class Slot < ApplicationRecord
   end
   def valid_stop
   if stop.to_time.hour>20
-  else
     errors.add(:stop, "Not within Office Timings")
 end
+if(stop.to_time-start.to_time<=1800)
+  errors.add(:stop, "Minimum duration is 30 mins")
   end
+end
 
   def generate_token
    self.token = loop do
