@@ -13,6 +13,11 @@ class UsersController < ApplicationController
 user.update_column(:room_id, params[:room_id].to_i)
   user.update_column(:slot_id, params[:slot_id].to_i)
   end
+
+  def added
+    rand="testtbugg"
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save

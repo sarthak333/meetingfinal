@@ -25,9 +25,9 @@
      <%= urecord.status %>
         </p>
       <p>
-  <%= link_to "Accept", response_path(:slot_id => slot.id, :user_id => @user.id),  remote: true, class:"btn btn-sm btn-success"%>
+  <%= link_to "Accept", response_path(:slot_id => slot.id, :user_id => @user.id), class:"btn btn-sm btn-success"%>
   <div></div>
-  <%= link_to "Decline", responseno_path(:slot_id => slot.id, :user_id => @user.id),  remote: true, class:"btn btn-sm btn-danger"%>
+  <%= link_to "Decline", responseno_path(:slot_id => slot.id, :user_id => @user.id), class:"btn btn-sm btn-danger"%>
 <div></div>
 <br>
 

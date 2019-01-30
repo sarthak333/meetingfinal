@@ -1,4 +1,4 @@
-<% if @room.slot.errors.any? %>
+<% if @slot.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
       The form contains <%= pluralize(@room.slot.errors.count, "error") %>.

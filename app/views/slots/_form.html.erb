@@ -1,5 +1,12 @@
-
 <%= form_with(model: [ @room, @room.slot.build ], local: true) do |f| %>
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name, class: 'form-control' %>
+</p>
+<p>
+  <%= f.label :description %><br>
+  <%= f.text_field :description, class: 'form-control' %>
+</p>
   <p>
     <%= f.label :start %><br>
     <%= f.time_field :start, class: 'form-control' %>
@@ -8,10 +15,6 @@
     <%= f.label :stop %>
     <%= f.time_field :stop, class: 'form-control' %>
 
-  </p>
-  <p>
-  <%= f.label :people %>
-  <%= f.number_field :people, class: 'form-control' %>
   </p>
 
   <p>

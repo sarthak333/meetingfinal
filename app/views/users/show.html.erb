@@ -9,7 +9,7 @@
 <h3 class="center" style="margin-top:5%;">Current Meetings</h3>
 
   <div class="row">
-    <%= render @user.urecord %>
+    <%= render @user.urecord.order(:created_at) %>
 
 </div>
 

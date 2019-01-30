@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'rooms/home'
   get 'sessions/new'
   root 'static_pages#home'
+  get '/openslot', to: 'slots#show'
   get '/adduser', to: 'srecords#new'
   get '/showSlotUsers', to: 'srecords#show'
   get '/addtoslot', to: 'srecords#new'
